@@ -1,6 +1,7 @@
 const buttonClick = () => {
     const city = document.getElementById('input-box');
     const cityValue = city.value;
+    city.value='';
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=356de828497ed670fac9186799dbd159`)
         .then(res => res.json())
         .then(data => loadData(data))
